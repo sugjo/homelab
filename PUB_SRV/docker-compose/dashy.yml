@@ -10,7 +10,7 @@ services:
       - /home/sugjo/opt/dashy/conf.yml:/app/public/conf.yml
     ports:
 
-      - 8080:80
+      - 8081:80
     # Set any environmental variables
     environment:
       - NODE_ENV=production
