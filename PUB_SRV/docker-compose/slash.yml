@@ -6,7 +6,7 @@ services:
     ports:
       - 5231:5231
     volumes:
-      - /home/sugjo/opt/slash:/var/opt/slash
+      - /docker/volumes/slash:/var/opt/slash
     restart: unless-stopped
 
 volumes:
