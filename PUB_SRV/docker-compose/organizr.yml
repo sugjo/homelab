@@ -6,7 +6,7 @@ services:
         image: organizr/organizr:latest
         restart: unless-stopped
         ports:
-            - 85:80
+            - 86:80
         volumes:
             - /docker/volumes/organizr:/config
         environment:
