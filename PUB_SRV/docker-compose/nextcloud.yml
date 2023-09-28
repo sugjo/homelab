@@ -9,8 +9,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /docker/volumes/nextcloud/appdata:/config
-      - /docker/volumes/nextcloud:/data
-      - /docker/volumes/public/media:/app/www/public/media
+      - /docker/volumes/public:/data
     ports:
       - 449:443
     restart: unless-stopped
