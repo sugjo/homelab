@@ -12,5 +12,5 @@ services:
       - /docker/volumes/qbittorrent/config:/config
       - /docker/volumes/public/media:/downloads
     ports:
-      - 8090:8080
+      - 8090:8090
     restart: unless-stopped
