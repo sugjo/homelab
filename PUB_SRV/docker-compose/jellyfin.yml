@@ -9,9 +9,9 @@ services:
       - TZ=Etc/UTC
       - JELLYFIN_PublishedServerUrl=192.168.0.20
     volumes:
-      - /path/to/library:/config
-      - /path/to/tvseries:/data/tvshows
-      - /path/to/movies:/data/movies
+      - /docker/volumes/jellyfin/library:/config
+      - /docker/volumes/jellyfin/media/tvseries:/data/tvshows
+      - /docker/volumes/jellyfin/media/movies:/data/movies
     ports:
       - 8096:8096
     restart: unless-stopped

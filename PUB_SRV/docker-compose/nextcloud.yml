@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /docker/volumes/nextcloud/appdata:/config
+      - /docker/volumes/nextcloud:/data
+      - /docker/volumes/jellyfin/media:/app/www/public/media
+    ports:
+      - 443:443
+    restart: unless-stopped
