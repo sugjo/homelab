@@ -10,7 +10,7 @@ services:
     volumes:
       - /docker/volumes/nextcloud/appdata:/config
       - /docker/volumes/nextcloud:/data
-      - /docker/volumes/jellyfin/media:/app/www/public/media
+      - /docker/volumes/public/media:/app/www/public/media
     ports:
       - 443:443
     restart: unless-stopped
