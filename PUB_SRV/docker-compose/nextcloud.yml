@@ -12,5 +12,5 @@ services:
       - /docker/volumes/nextcloud:/data
       - /docker/volumes/public/media:/app/www/public/media
     ports:
-      - 443:443
+      - 449:443
     restart: unless-stopped
