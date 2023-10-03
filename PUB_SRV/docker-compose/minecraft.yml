@@ -17,6 +17,8 @@ services:
       ONLINE_MODE: FALSE
       VIEW_DISTANCE: 5
       SIMULATION_DISTANCE: 5
+      ENABLE_QUERY: TRUE
+      PVP: FALSE
     volumes:
       - /docker/volumes/minecraft/modpacks/DC:/data
     restart: always
