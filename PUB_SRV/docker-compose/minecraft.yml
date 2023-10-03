@@ -15,6 +15,8 @@ services:
       MEMORY: "8G"
       MOTD: "\u00a74\u0414\u0440\u0435\u0432\u043d\u0438\u0435 \u0440\u0443\u0441\u044b\u00a7r, \u0432\u043f\u0435\u0440\u0451\u0434!\n\u00a72\u042f\u0449\u0435\u0440\u044b\u00a7r, \u0441\u043e\u0441\u0430\u0442\u044c!"
       ONLINE_MODE: FALSE
+      ENABLE_STATUS: TRUE
+      PVP: FALSE
     volumes:
       - /docker/volumes/minecraft/modpacks/DC:/data
     restart: always
