@@ -6,7 +6,7 @@ services:
       - "3080:3080"
       # - "3023:3023" #SSH teleport port
       # - "3024:3024" #Reverse porxy
-      # - "3025:3025"
+      - "3025:3025"
     volumes:
       - /docker/volumes/teleport/config:/etc/teleport
       - /docker/volumes/teleport/data:/var/lib/teleport
