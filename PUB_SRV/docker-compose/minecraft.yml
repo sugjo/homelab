@@ -22,5 +22,5 @@ services:
       ALLOW_FLIGHT: TRUE
       PVP: FALSE
     volumes:
-      - /docker/volumes/minecraft/modpacks/DC:/data
+      - /docker/volumes/minecraft.test/modpacks/DC:/data
     restart: always
