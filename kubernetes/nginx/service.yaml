@@ -7,3 +7,4 @@ spec:
     app: webserver
   ports:
   - port: 80
+  type: LoadBalancer
