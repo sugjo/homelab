@@ -14,8 +14,6 @@ spec:
       labels:
         app: webserver
     spec:
-      securityContext:
-        readOnlyRootFilesystem: true
       containers:
       - name: nginx
         image: nginx:latest
