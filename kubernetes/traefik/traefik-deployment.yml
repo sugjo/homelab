@@ -20,7 +20,6 @@ spec:
         - name: traefik
           image: traefik:v2.10
           args:
-            - --logLevel=INFO
             - --api.insecure
             - --providers.kubernetesingress
           ports:
