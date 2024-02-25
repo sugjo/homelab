@@ -45,7 +45,8 @@ spec:
             - name: ssl-certs
               mountPath: /ssl-certs
       podSecurityContext:
-        fsGroup: null
+        runAsNonRoot: true
+        runAsUser: 1000
       volumes:
       - name: ssl-certs
         persistentVolumeClaim:
