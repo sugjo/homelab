@@ -4,7 +4,6 @@ metadata:
   name: webserver-cm
 data:
   nginx.conf: |
-    user sugjo;
     worker_processes 1;
     events {
       worker_connections 10240;
