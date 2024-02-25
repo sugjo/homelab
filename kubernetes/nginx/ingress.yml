@@ -10,6 +10,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: webserver
+            name: webserver-service
             port:
               name: web
