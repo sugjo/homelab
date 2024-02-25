@@ -23,6 +23,7 @@ spec:
             - --api.insecure
             - --providers.kubernetesingress
             - --serversTransport.insecureSkipVerify=true
+            - --tracing.instana.logLevel=debug
           ports:
             - name: web
               containerPort: 80
