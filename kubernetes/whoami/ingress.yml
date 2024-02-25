@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: webserver-ingress
+  name: whoami-ingress
 spec:
   rules:
   - host: "whoami.sugjo.dev"
@@ -11,7 +11,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: webserver-service
+            name: whoami
             port:
               name: web
   tls:
