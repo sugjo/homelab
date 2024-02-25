@@ -13,7 +13,7 @@ spec:
           service:
             name: whoami
             port:
-              name: web
+              name: 80
   tls:
   - hosts:
       - whoami.sugjo.dev
