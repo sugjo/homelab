@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: temp_nfs
+  name: temp-nfs
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: temp_nfs
+  storageClassName: temp-nfs
   resources:
     requests:
       storage: 100Mi
