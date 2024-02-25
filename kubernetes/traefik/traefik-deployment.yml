@@ -23,7 +23,9 @@ spec:
             - --api.insecure
             - --providers.kubernetesingress
             - --serversTransport.insecureSkipVerify=true
+            - --entryPoints.web.address=:80
             - --entryPoints.websecure.address=:443
+            - --entrypoints.web.http.redirections.entryPoint.to=websecure
           ports:
             - name: web
               containerPort: 80
