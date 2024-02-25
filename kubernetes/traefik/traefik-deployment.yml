@@ -44,7 +44,7 @@ spec:
           volumeMounts:
             - name: ssl-certs
               mountPath: /ssl-certs
-      podSecurityContext:
+      securityContext:
         runAsNonRoot: true
         runAsUser: 1000
       volumes:
