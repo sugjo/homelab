@@ -41,4 +41,4 @@ spec:
           claimName: nfs
       - name: temp
         persistentVolumeClaim:
-          claimName: nfs-temp
+          claimName: temp-nfs
