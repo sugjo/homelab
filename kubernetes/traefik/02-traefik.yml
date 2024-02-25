@@ -20,10 +20,19 @@ spec:
         - name: traefik
           image: traefik:v2.10
           args:
-            - --api.insecure
-            - --providers.kubernetesingress
+            - --logLevel=INFO
+            - --configfile=/config/traefik.yml
+            # - --api.insecure
+            # - --providers.kubernetesingress
           ports:
             - name: web
               containerPort: 80
             - name: dashboard
               containerPort: 8080
+          volumes:
+            - name: traefik-configmap
+              configMap:
+                name: traefik-configmap
+          volumeMounts:
+            - mountPath: "/config"
+              name: "traefik-configmap"
