@@ -14,7 +14,7 @@ spec:
             name: webserver-service
             port:
               name: web
-  # tls:
-  # - hosts:
-  #     - test.sugjo.dev
-  #   secretName: sugjodev
+  tls:
+  - hosts:
+      - test.sugjo.dev
+    secretName: sugjodev
