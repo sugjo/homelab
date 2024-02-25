@@ -4,7 +4,8 @@ metadata:
   name: webserver-ingress
 spec:
   rules:
-  - http:
+  - host: "test.sugjo.dev"
+    http:
       paths:
       - path: /
         pathType: Prefix
