@@ -8,14 +8,14 @@ metadata:
 spec:
   rules:
   - host: whoami.sugjo.dev
-  - http:
+    http:
       paths:
       - path: /
-        pathType: Prefix
+        pathType: Exact
         backend:
           service:
             name: whoami
             port:
-              name: web
+              number: 80
   tls:
   - secretName: sugjodev
