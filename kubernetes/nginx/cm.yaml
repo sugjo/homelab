@@ -6,9 +6,14 @@ data:
   nginx.conf: |
     user sugjo;
     worker_processes 1;
+
+    error_log  /var/log/nginx/error.log warn;
+    pid /var/run/nginx.pid;
+
     events {
       worker_connections 10240;
     }
+
     http {
       server {
         listen 80;

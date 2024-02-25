@@ -14,9 +14,6 @@ spec:
       labels:
         app: webserver
     spec:
-      securityContext:
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
       - name: nginx
         image: nginx:latest
