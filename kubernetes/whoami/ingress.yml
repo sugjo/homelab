@@ -5,7 +5,7 @@ metadata:
 spec:
   rules:
   # - host: whoami.sugjo.dev
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
