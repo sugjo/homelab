@@ -4,6 +4,17 @@ metadata:
   name: traefik-configmap
 data:
   traefik.yml: |
-    providers:
-      kubernetesIngress:
-        endpoint: "http://192.168.14.75:80"
+    logs:
+      general:
+        level: ERROR
+
+    ports:
+      web:
+
+    ingressRoute:
+      dashboard:
+        enabled: true
+
+    ingressClass:
+      enabled: true
+      isDefaultClass: true
