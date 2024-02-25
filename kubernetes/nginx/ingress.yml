@@ -13,7 +13,7 @@ spec:
           service:
             name: webserver-service
             port:
-              name: websecure
+              name: web
   tls:
   - hosts:
       - test.sugjo.dev
