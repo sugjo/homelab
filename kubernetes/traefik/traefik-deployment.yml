@@ -22,7 +22,6 @@ spec:
           args:
             - --api.insecure
             - --providers.kubernetesingress
-            - --providers.kubernetesingress.ingressendpoint.ip=192.168.14.75
           ports:
             - name: web
               containerPort: 80
