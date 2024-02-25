@@ -9,4 +9,5 @@ spec:
     name: regru-dns
     kind: ClusterIssuer
   dnsNames:
-    -  *.sugjo.dev
+    - '*.sugjo.dev'
+    - sugjo.dev
