@@ -7,7 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: true
 spec:
   rules:
-  - host: whoami.sugjo.dev
+  - host: "whoami.sugjo.dev"
     http:
       paths:
       - path: /
