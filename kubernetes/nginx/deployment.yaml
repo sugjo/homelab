@@ -15,7 +15,7 @@ spec:
         app: webserver
     spec:
       securityContext:
-        runAsUser: 1000
+        fsGroup: 2000
       containers:
       - name: nginx
         image: nginx:latest
