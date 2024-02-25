@@ -16,5 +16,5 @@ spec:
               name: web
   tls:
   - hosts:
-      - *.sugjo.dev
+      - test.sugjo.dev
     secretName: sugjodev
