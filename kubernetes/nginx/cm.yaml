@@ -4,7 +4,7 @@ metadata:
   name: webserver-cm
 data:
   nginx.conf: |
-    user sugjo;
+    user nginx;
     worker_processes 1;
 
     error_log  /var/log/nginx/error.log warn;
