@@ -4,7 +4,7 @@ metadata:
   name: whoami-ingress
 spec:
   rules:
-  - host: whoami.sugjo.dev
+  # - host: whoami.sugjo.dev
     http:
       paths:
       - path: /
@@ -13,8 +13,8 @@ spec:
           service:
             name: whoami
             port:
-              number: 80
-  tls:
-  - hosts:
-      - whoami.sugjo.dev
-    secretName: sugjodev
+              name: web
+  # tls:
+  # - hosts:
+  #     - whoami.sugjo.dev
+  #   secretName: sugjodev
