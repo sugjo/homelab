@@ -28,6 +28,8 @@ spec:
         volumeMounts:
           - name: webserver-cm
             mountPath: /etc/nginx
+          - name: temp
+            mountPath: /var/cache/nginx/client_temp
           - name: local
             mountPath: /usr/share/nginx/html
       volumes:
@@ -37,3 +39,6 @@ spec:
       - name: local
         persistentVolumeClaim:
           claimName: nfs
+      - name: temp
+        persistentVolumeClaim:
+          claimName: nfs_temp
