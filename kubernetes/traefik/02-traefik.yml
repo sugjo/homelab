@@ -35,4 +35,4 @@ spec:
                 name: traefik-configmap
           volumeMounts:
             - mountPath: "/config"
-              name: "traefik-configmap"
+              name: traefik-configmap
