@@ -19,11 +19,32 @@ spec:
       containers:
         - name: traefik
           image: traefik:v2.10
+          env:
+          - name: REGRU_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: acme-secret
+                key: username
+          - name: REGRU_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: acme-secret
+                key: password
           args:
             - --api.insecure
             - --providers.kubernetesingress
+            - --certificatesresolvers.regru.acme.dnschallenge.provider=regru
+            - --certificatesresolvers.regru.acme.email=akhmadeev.ilya@yandex.ru
+            - --certificatesresolvers.regru.acme.storage=/ssl-certs/acme-regru.json
           ports:
             - name: web
               containerPort: 80
             - name: dashboard
               containerPort: 8080
+          volumeMounts:
+            - name: ssl-certs
+              mountPath: /ssl-certs
+      volumes:
+      - name: ssl-certs
+        persistentVolumeClaim:
+          claimName: ssl-certs

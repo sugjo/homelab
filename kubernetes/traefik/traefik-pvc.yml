@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ssl-certs
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ssl-certs
+  resources:
+    requests:
+      storage: 500Mi
