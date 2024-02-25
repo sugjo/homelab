@@ -20,20 +20,3 @@ spec:
         ports:
           - name: web
             containerPort: 80
-        volumeMounts:
-          - name: webserver-cm
-            mountPath: /etc/nginx
-          - name: temp
-            mountPath: /var/cache/nginx
-          - name: local
-            mountPath: /usr/share/nginx/html
-      volumes:
-      - name: webserver-cm
-        configMap:
-          name: webserver-cm
-      - name: local
-        persistentVolumeClaim:
-          claimName: nfs
-      - name: temp
-        persistentVolumeClaim:
-          claimName: temp-nfs
