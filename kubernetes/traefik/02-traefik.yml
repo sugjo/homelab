@@ -29,10 +29,10 @@ spec:
               containerPort: 80
             - name: dashboard
               containerPort: 8080
-          volumes:
-            - name: traefik-configmap
-              configMap:
-                name: traefik-configmap
           volumeMounts:
-            - mountPath: "/config"
-              name: traefik-configmap
+            - name: traefik-configmap
+              mountPath: "/config"
+      volumes:
+        - name: traefik-configmap
+          configMap:
+            name: traefik-configmap
