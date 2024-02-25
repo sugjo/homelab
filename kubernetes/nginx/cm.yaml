@@ -18,7 +18,7 @@ data:
           index index.html index.htm;
         }
         location /test {
-          return 401
+          return 401;
         }
       }
     }
