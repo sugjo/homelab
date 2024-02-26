@@ -3,11 +3,12 @@ kind: Ingress
 metadata:
   name: whoami-ingress
   annotations:
+    kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     # traefik.ingress.kubernetes.io/router.tls: true
 spec:
   rules:
-  - host: whoami.sugjo.dev
+  - host: "whoami.sugjo.dev"
     http:
       paths:
       - path: /
