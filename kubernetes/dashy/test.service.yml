@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: dashy
-  type: NodePort
+  type: ClusterIP
   ports:
     - name: http
       port: 80
