@@ -5,9 +5,9 @@ metadata:
 
 spec:
   ports:
-    - name: web
+    - name: http
       port: 80
-      targetPort: web
 
   selector:
-    app: whoami
+    app: traefiklabs
+    name: whoami

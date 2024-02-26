@@ -1,8 +1,7 @@
-kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
 metadata:
-  name: traefik-role
-
+  name: traefik-ingress-controller
 rules:
   - apiGroups:
       - ""
@@ -31,3 +30,18 @@ rules:
       - ingresses/status
     verbs:
       - update
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: traefik-ingress-controller
+
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik-ingress-controller
+subjects:
+  - kind: ServiceAccount
+    name: traefik-ingress-controller
+    namespace: default # Using "default" because we did not specify a namespace when creating the ClusterAccount.
