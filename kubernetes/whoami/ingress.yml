@@ -19,7 +19,7 @@ spec:
             name: whoami-service
             port:
               number: 80
-  # tls:
-  # - hosts:
-  #   - whoami.sugjo.dev
-  #   secretName: sugjodev
+  tls:
+  - hosts:
+    - whoami.sugjo.dev
+    secretName: sugjodev
