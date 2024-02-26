@@ -9,7 +9,7 @@ metadata:
 
 spec:
   rules:
-  - host: "whoami.sugjo.home"
+  - host: "whoami.sugjo.dev"
     http:
       paths:
       - path: /
