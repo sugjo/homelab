@@ -6,6 +6,7 @@ spec:
   ipAllowList:
     sourceRange:
       - 192.168.14.1/24
+      - 192.168.14.143
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -16,7 +17,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
-    # "traefik.ingress.kubernetes.io/router.middlewares": local-only@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: local-only@kubernetescrd
 
 spec:
   rules:
