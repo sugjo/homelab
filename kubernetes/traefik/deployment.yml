@@ -27,10 +27,10 @@ spec:
           image: traefik:v2.11
           args:
             - --api.insecure
+            - --entryPoints.websecure.address=:443
             - --providers.kubernetesingress
             # - --serversTransport.insecureSkipVerify=true
             # - --entryPoints.web.address=:80
-            - --entryPoints.websecure.address=:443
             # - --entrypoints.web.http.redirections.entryPoint.to=websecure
           ports:
             # - name: web

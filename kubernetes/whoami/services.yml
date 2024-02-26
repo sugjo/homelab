@@ -10,4 +10,4 @@ spec:
 
   selector:
     app: traefiklabs
-    name: whoami
+    task: whoami
