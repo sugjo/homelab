@@ -6,8 +6,7 @@ metadata:
 spec:
   selector:
     app: dashy
-  type: LoadBalancer
-  LoadBalancerIP: 192.168.14.75
+  type: NodePort
   ports:
     - name: http
       port: 80
