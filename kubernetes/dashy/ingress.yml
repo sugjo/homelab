@@ -20,5 +20,5 @@ spec:
               number: 80
   tls:
   - hosts:
-    - dashy.sugjo.dev
+    - dashy.admin.sugjo.dev
     secretName: sugjodev
