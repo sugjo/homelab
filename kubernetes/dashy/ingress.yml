@@ -8,7 +8,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
-  - host: "dashy.sugjo.dev"
+  - host: "dashy.admin.sugjo.dev"
     http:
       paths:
       - path: /
