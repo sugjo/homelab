@@ -6,7 +6,8 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: local-only@kubernetesgateway
+    kube-vip.io/loadbalancerIPs: 192.168.14.75
+    # traefik.ingress.kubernetes.io/router.middlewares: local-only@kubernetes
 
 spec:
   rules:
