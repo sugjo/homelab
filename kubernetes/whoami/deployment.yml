@@ -3,20 +3,17 @@ kind: Deployment
 metadata:
   name: whoami
   labels:
-    app: traefiklabs
-    name: whoami
+    app: whoami
 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: traefiklabs
-      task: whoami
+      app: whoami
   template:
     metadata:
       labels:
-        app: traefiklabs
-        task: whoami
+        app: whoami
     spec:
       containers:
         - name: whoami

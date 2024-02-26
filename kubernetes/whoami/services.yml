@@ -9,5 +9,4 @@ spec:
       port: 80
 
   selector:
-    app: traefiklabs
-    task: whoami
+    app: whoami
