@@ -29,6 +29,7 @@ spec:
             - --api.insecure
             - --entryPoints.websecure.address=:443
             - --providers.kubernetesingress
+            - --providers.kubernetesingress.ingressendpoint.ip=192.168.14.75
             # - --serversTransport.insecureSkipVerify=true
           ports:
             - name: weblocal
