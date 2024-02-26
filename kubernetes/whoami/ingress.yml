@@ -1,3 +1,13 @@
+apiVersion: traefik.io/v1alpha1
+kind: MiddlewareTCP
+metadata:
+  name: local-only
+spec:
+  ipAllowList:
+    sourceRange:
+      - 192.168.14.1/24
+
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -6,7 +16,8 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.tcp.middlewares.local.ipallowlist.sourcerange: "192.168.14.1/24"
+    traefik.ingress.kubernetes.io/router.middlewares: local-only@kubernetescrd
+
 spec:
   rules:
   - host: "whoami.sugjo.dev"
