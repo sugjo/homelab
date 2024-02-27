@@ -10,8 +10,6 @@ data:
     mode: cluster
   settings.yaml: |
     language: ru
-    title: My Awesome Homepage
-    theme: dark
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
