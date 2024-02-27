@@ -9,8 +9,8 @@ data:
   kubernetes.yaml: |
     mode: cluster
   settings.yaml: |
-    - title: My Awesome Homepage
-    - theme: dark
+    title: My Awesome Homepage
+    theme: dark
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
