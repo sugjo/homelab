@@ -9,6 +9,7 @@ data:
   kubernetes.yaml: |
     mode: cluster
   settings.yaml: |
+    language: ru
     title: My Awesome Homepage
     theme: dark
   custom.css: ""
