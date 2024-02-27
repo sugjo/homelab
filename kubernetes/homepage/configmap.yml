@@ -12,7 +12,6 @@ data:
     title: HomeLab
     language: ru
     theme: dark
-    color: stone
     headerStyle: boxed
   custom.css: ""
   custom.js: ""
@@ -49,13 +48,10 @@ data:
           cpu: true
           memory: true
           showLabel: true
-    - resources:
-        backend: resources
-        expanded: true
-        cpu: true
-        memory: true
     - search:
-        provider: [google]
+        provider: [custom, google]
+        url: https://yandex.com/search/?text=
+        suggestionUrl: https://suggest.yandex.ru/suggest-sl?part=
         target: _blank
         showSearchSuggestions: true
         focus: true
