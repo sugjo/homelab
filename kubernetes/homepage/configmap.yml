@@ -23,7 +23,6 @@ data:
               href: https://github.com/
   services.yaml: |
     - My First Group:
-        widget:
         - My First Service:
             href: https://192.168.14.71/
             description: Rancher
