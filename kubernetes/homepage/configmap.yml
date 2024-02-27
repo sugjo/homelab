@@ -12,7 +12,7 @@ data:
     title: HomeLab
     language: ru
     theme: dark
-    color: gray
+    color: stone
     headerStyle: boxed
   custom.css: ""
   custom.js: ""
@@ -28,25 +28,27 @@ data:
             description: Rancher
 
     - My Second Group:
-        widget:
-        - kubernetes:
-            cluster:
-              show: true
-              cpu: true
-              memory: true
-              showLabel: true
-              label: "cluster"
-            nodes:
-              show: true
-              cpu: true
-              memory: true
-              showLabel: true
+        - My Second Service:
+            href: http://localhost/
+            description: Homepage is the best
 
     - My Third Group:
         - My Third Service:
             href: http://localhost/
             description: Homepage is 😎
   widgets.yaml: |
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
     - resources:
         backend: resources
         expanded: true
