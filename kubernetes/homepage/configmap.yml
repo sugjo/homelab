@@ -12,7 +12,8 @@ data:
     title: HomeLab
     language: ru
     theme: dark
-    headerStyle: boxed
+    color: zinc
+    headerStyle: boxedWidgets
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
