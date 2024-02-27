@@ -24,7 +24,9 @@ spec:
     # - name: web
     #   targetPort: web
     #   port: 80
-    - protocol: TCP
-      name: websecure
+    - name: local
       targetPort: 443
       port: 443
+    - name: websecure
+      targetPort: 444
+      port: 444

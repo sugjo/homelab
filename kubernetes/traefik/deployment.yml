@@ -27,12 +27,14 @@ spec:
           image: traefik:v2.11
           args:
             - --api.insecure
-            - --entryPoints.websecure.address=:443
+            - --entryPoints.local.address=:443
+            - --entryPoints.websecure.address=:444
             - --providers.kubernetesingress
-            - --providers.kubernetesingress.ingressendpoint.ip=192.168.14.75
             # - --serversTransport.insecureSkipVerify=true
           ports:
-            - name: weblocal
+            - name: local
+              containerPort: 443
+            - name: websecure
               containerPort: 443
             - name: dashboard
               containerPort: 8080
