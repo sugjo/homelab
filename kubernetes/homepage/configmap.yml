@@ -14,13 +14,6 @@ data:
     theme: dark
     color: gray
     headerStyle: boxed
-    layout:
-      Section A:
-        header: false
-      Section B:
-        style: row
-        columns: 3
-        header: false
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
@@ -29,7 +22,21 @@ data:
             - abbr: GH
               href: https://github.com/
   services.yaml: |
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+
     - My First Group:
+        widget:
         - My First Service:
             href: https://192.168.14.71/
             description: Rancher
@@ -44,18 +51,6 @@ data:
             href: http://localhost/
             description: Homepage is 😎
   widgets.yaml: |
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "cluster"
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
     - resources:
         backend: resources
         expanded: true
