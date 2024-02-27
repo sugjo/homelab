@@ -9,7 +9,18 @@ data:
   kubernetes.yaml: |
     mode: cluster
   settings.yaml: |
+    title: HomeLab
     language: ru
+    theme: dark
+    color: gray
+    headerStyle: boxed
+    layout:
+      Section A:
+        header: false
+      Section B:
+        style: row
+        columns: 3
+        header: false
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
@@ -51,6 +62,8 @@ data:
         cpu: true
         memory: true
     - search:
-        provider: duckduckgo
+        provider: [google]
         target: _blank
+        showSearchSuggestions: true
+        focus: true
   docker.yaml: ""
