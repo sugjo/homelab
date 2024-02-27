@@ -22,19 +22,6 @@ data:
             - abbr: GH
               href: https://github.com/
   services.yaml: |
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "cluster"
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-
     - My First Group:
         widget:
         - My First Service:
@@ -42,9 +29,19 @@ data:
             description: Rancher
 
     - My Second Group:
-        - My Second Service:
-            href: http://localhost/
-            description: Homepage is the best
+        widget:
+        - kubernetes:
+            cluster:
+              show: true
+              cpu: true
+              memory: true
+              showLabel: true
+              label: "cluster"
+            nodes:
+              show: true
+              cpu: true
+              memory: true
+              showLabel: true
 
     - My Third Group:
         - My Third Service:
