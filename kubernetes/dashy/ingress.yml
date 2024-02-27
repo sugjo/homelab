@@ -6,6 +6,11 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: local
     traefik.ingress.kubernetes.io/router.tls: "true"
+    gethomepage.dev/description: Дэшборд для холопов
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Cluster Management
+    gethomepage.dev/icon: dashy.png
+    gethomepage.dev/name: Dashy
 spec:
   rules:
   - host: "dashy.sugjo.dev"
