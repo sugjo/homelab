@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path   : "prod/applications"
-    repoURL: "https://github.com/sugjo/homelab"
+    repoURL: "git@github.com:sugjo/homelab.git"
     targetRevision: HEAD
   destination:
     name     : in-cluster
