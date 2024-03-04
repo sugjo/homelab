@@ -164,7 +164,7 @@ ingressRoute:
     middlewares: []
     # -- TLS options (e.g. secret containing certificate)
     tls:
-      secretName: sugjodev
+      secretName: default/sugjodev
   healthcheck:
     # -- Create an IngressRoute for the healthcheck probe
     enabled: false
