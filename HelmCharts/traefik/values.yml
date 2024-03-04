@@ -23,7 +23,6 @@ globalArguments:
 
 ports:
   local:
-    asDefault: true
     port: 8443
     exposedPort: 443
     tls:
@@ -34,9 +33,6 @@ ports:
   websecure:
     port: 8444
     exposedPort: 444
-    exposeInternal: false
-    http3:
-      enabled: false
     tls:
       enabled: true
       secretName: sugjodev
