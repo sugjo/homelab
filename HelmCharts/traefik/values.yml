@@ -22,16 +22,6 @@ ingressRoute:
     tls:
       secretName: sugjodev
 
-  rancher:
-    enabled: true
-    labels: {}
-    matchRule: Host(`test.sugjo.dev`)
-    service: rancher
-    entryPoints: ["local"]
-    middlewares: []
-    tls:
-      secretName: sugjodev
-
 globalArguments:
 - "--global.checknewversion"
 
@@ -44,10 +34,6 @@ ports:
     middlewares: []
     tls:
       secretName: sugjodev
-
-  web:
-    redirectTo:
-      port: websecure
 
   websecure:
     port: 8444
