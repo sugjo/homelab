@@ -9,6 +9,8 @@ ingressRoute:
     matchRule: Host(`test.sugjo.dev`)
     entryPoints: ["local"]
     middlewares: []
+    tls:
+      secretName: sugjodev
 
   healthcheck:
     enabled: false
@@ -17,6 +19,8 @@ ingressRoute:
     matchRule: PathPrefix(`/ping`)
     entryPoints: ["traefik"]
     middlewares: []
+    tls:
+      secretName: sugjodev
 
 globalArguments:
 - "--global.checknewversion"
@@ -26,18 +30,12 @@ ports:
     port: 8443
     expose: true
     exposedPort: 443
-    tls:
-      enabled: true
-      secretName: sugjodev
     middlewares: []
 
   websecure:
     port: 8444
     expose: true
     exposedPort: 444
-    tls:
-      enabled: true
-      secretName: sugjodev
     middlewares: []
 
 logs:
