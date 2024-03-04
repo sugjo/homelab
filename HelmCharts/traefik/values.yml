@@ -31,12 +31,16 @@ ports:
     expose: true
     exposedPort: 443
     middlewares: []
+    tls:
+      secretName: sugjodev
 
   websecure:
     port: 8444
     expose: true
     exposedPort: 444
     middlewares: []
+    tls:
+      secretName: sugjodev
 
 logs:
   general:
