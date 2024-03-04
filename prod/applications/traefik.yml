@@ -14,7 +14,7 @@ spec:
         releaseName: traefik
         valueFiles:
           - $values/HelmChart/traefik/values.yml
-    - repoURL: https://github.com/sugjo/homelab
+    - repoURL: git@github.com:sugjo/homelab.git
       targetRevision: HEAD
       ref: values
   destination:
