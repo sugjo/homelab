@@ -11,8 +11,8 @@ spec:
     targetRevision: 26.1.0
     helm:
       releaseName: traefik
-      valuesFiles:
-        - "../../HelmCharts/traefik/values.yml"
+      # valuesFiles:
+      #   - "../../HelmCharts/traefik/values.yml"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: traefik
