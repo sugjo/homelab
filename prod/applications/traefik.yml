@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     chart: traefik
-    path: "HelmCharts/traefik/"
+    # path: "HelmCharts/traefik/"
     repoURL: https://traefik.github.io/charts
     targetRevision: 26.1.0
     helm:
