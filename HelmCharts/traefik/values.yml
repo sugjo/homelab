@@ -159,7 +159,7 @@ ingressRoute:
     # -- Specify the allowed entrypoints to use for the dashboard ingress route, (e.g. traefik, web, websecure).
     # By default, it's using traefik entrypoint, which is not exposed.
     # /!\ Do not expose your dashboard without any protection over the internet /!\
-    entryPoints: ["websecure"]
+    entryPoints: ["local"]
     # -- Additional ingressRoute middlewares (e.g. for authentication)
     middlewares: []
     # -- TLS options (e.g. secret containing certificate)
@@ -675,11 +675,11 @@ ports:
   websecure:
     ## -- Enable this entrypoint as a default entrypoint. When a service doesn't explicitly set an entrypoint it will only use this entrypoint.
     # asDefault: true
-    port: 8443
+    port: 8444
     # hostPort: 8443
     # containerPort: 8443
     expose: true
-    exposedPort: 443
+    exposedPort: 444
     ## -- Different target traefik port on the cluster, useful for IP type LB
     # targetPort: 80
     ## -- The port protocol (TCP/UDP)
@@ -734,6 +734,27 @@ ports:
     #   - namespace-name1@kubernetescrd
     #   - namespace-name2@kubernetescrd
     middlewares: []
+    websecure:
+    ## -- Enable this entrypoint as a default entrypoint. When a service doesn't explicitly set an entrypoint it will only use this entrypoint.
+    # asDefault: true
+  local:
+    port: 8443
+    expose: true
+    exposedPort: 443
+    protocol: TCP
+    exposeInternal: false
+
+    http3:
+      enabled: false
+
+    tls:
+      enabled: true
+      options: ""
+      certResolver: ""
+      domains: []
+
+    middlewares: []
+
   metrics:
     # -- When using hostNetwork, use another port to avoid conflict with node exporter:
     # https://github.com/prometheus/prometheus/wiki/Default-port-allocations
