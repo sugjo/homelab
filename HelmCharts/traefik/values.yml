@@ -24,6 +24,7 @@ globalArguments:
 ports:
   local:
     port: 8443
+    expose: true
     exposedPort: 443
     tls:
       enabled: true
@@ -32,6 +33,7 @@ ports:
 
   websecure:
     port: 8444
+    expose: true
     exposedPort: 444
     tls:
       enabled: true
