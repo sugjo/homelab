@@ -29,7 +29,7 @@ additionalArguments:
 - "--providers.kubernetesingress.allowexternalnameservices"
 - "--providers.kubernetescrd.allowexternalnameservices"
 
-serversTransport:
+tls:
   insecureSkipVerify: true
 
 ports:
