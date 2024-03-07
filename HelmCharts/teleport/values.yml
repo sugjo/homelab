@@ -1,5 +1,6 @@
 clusterName: teleport.sugjo.dev
 proxyListenerMode: multiplex
+service.type: ClusterIP
 annotations:
   ingress:
     kubernetes.io/ingress.class: traefik
