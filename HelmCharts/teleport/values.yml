@@ -1,8 +1,12 @@
-clusterName: k3s-ha
+clusterName: teleport.sugjo.dev
+proxyListenerMode: multiplex
+annotations:
+  ingress:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.entrypoints: local
+    traefik.ingress.kubernetes.io/router.tls: "true"
 ingress:
-  routes:
-    - match: "Host(`teleport.sugjo.dev`)"
-  tls:
-  - hosts:
-    - teleport.sugjo.dev
-    secretName: sugjodev
+  enabled: true
+  suppressAutomaticWildcards: true
+tls:
+  existingSecretName: "sugjodev"
