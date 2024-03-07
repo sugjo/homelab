@@ -28,9 +28,7 @@ globalArguments:
 additionalArguments:
 - "--providers.kubernetesingress.allowexternalnameservices"
 - "--providers.kubernetescrd.allowexternalnameservices"
-
-tls:
-  insecureSkipVerify: true
+- "--serversTransport.insecureSkipVerify=true"
 
 ports:
 
