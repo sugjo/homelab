@@ -9,6 +9,5 @@ annotations:
     traefik.ingress.kubernetes.io/router.tls: "true"
 ingress:
   enabled: true
-  suppressAutomaticWildcards: true
 tls:
   existingSecretName: "sugjodev"
