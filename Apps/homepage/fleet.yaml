@@ -1,0 +1,4 @@
+helm:
+  chart: homepage
+  repo: https://charts.truecharts.org
+  version: 7.4.1
