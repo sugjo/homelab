@@ -7,8 +7,9 @@ spec:
   project: default
   sources:
     - repoURL: https://charts.releases.teleport.dev
-      chart: teleport
+      chart: teleport-cluster
       path: "HelmCharts/teleport/"
+      targetRevision: 15.1.1
       helm:
         releaseName: teleport
         valueFiles:
