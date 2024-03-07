@@ -25,6 +25,10 @@ ingressRoute:
 globalArguments:
 - "--global.checknewversion"
 
+additionalArguments:
+- "--providers.kubernetesingress.allowexternalnameservices"
+- "--providers.kubernetescrd.allowexternalnameservices"
+
 ports:
 
   local:
