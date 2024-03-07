@@ -9,7 +9,6 @@ spec:
     - repoURL: https://charts.releases.teleport.dev
       chart: teleport
       path: "HelmCharts/teleport/"
-      targetRevision: 15.1.1
       helm:
         releaseName: teleport
         valueFiles:
