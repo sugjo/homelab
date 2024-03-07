@@ -12,10 +12,10 @@ spec:
       targetRevision: 15.1.1
       helm:
         releaseName: teleport
-        valueFiles:
-          - $values/HelmCharts/teleport/values.yml
-    - repoURL: git@github.com:sugjo/homelab.git
-      targetRevision: HEAD
-      ref: values
+    #     valueFiles:
+    #       - $values/HelmCharts/teleport/values.yml
+    # - repoURL: git@github.com:sugjo/homelab.git
+    #   targetRevision: HEAD
+    #   ref: values
   destination:
     server: "https://kubernetes.default.svc"
