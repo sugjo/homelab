@@ -2,3 +2,7 @@ helm:
   chart: traefik
   repo: https://traefik.github.io/charts
   version: 26.1.0
+  valuesFrom:
+    - configMapKeyRef:
+        name: traefik-values
+        key: values.yaml
