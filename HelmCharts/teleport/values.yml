@@ -1,8 +1,8 @@
 clusterName: k3s-ha
-# ingress:
-#   routes:
-#     - match: "Host(`teleport.sugjo.dev`)"
-#   tls:
-#   - hosts:
-#     - teleport.sugjo.dev
-#     secretName: sugjodev
+ingress:
+  routes:
+    - match: "Host(`teleport.sugjo.dev`)"
+  tls:
+  - hosts:
+    - teleport.sugjo.dev
+    secretName: sugjodev
