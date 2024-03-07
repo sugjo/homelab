@@ -6,6 +6,7 @@ annotations:
   ingress:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: local
+    traefik.ingress.kubernetes.io/router.tls: "true"
 ingress:
   enabled: true
   suppressAutomaticWildcards: true
