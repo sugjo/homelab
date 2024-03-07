@@ -1,0 +1,7 @@
+ingress:
+  routes:
+    - match: "Host(`teleport.sugjo.dev`)"
+  tls:
+  - hosts:
+    - teleport.sugjo.dev
+    secretName: sugjodev
