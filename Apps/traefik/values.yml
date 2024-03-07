@@ -1,13 +1,53 @@
-clusterName: teleport.sugjo.dev
-proxyListenerMode: multiplex
-service:
-  type: ClusterIP
-annotations:
-  ingress:
-    kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.entrypoints: local
-    traefik.ingress.kubernetes.io/router.tls: "true"
-ingress:
-  enabled: true
-tls:
-  existingSecretName: "sugjodev"
+deployment:
+  replicas: 3
+
+ingressRoute:
+  dashboard:
+    enabled: true
+    annotations: {}
+    labels: {}
+    matchRule: Host(`test.sugjo.dev`)
+    entryPoints: ["local"]
+    middlewares: []
+    tls:
+      secretName: sugjodev
+
+  healthcheck:
+    enabled: false
+    annotations: {}
+    labels: {}
+    matchRule: PathPrefix(`/ping`)
+    entryPoints: ["traefik"]
+    middlewares: []
+    tls:
+      secretName: sugjodev
+
+globalArguments:
+- "--global.checknewversion"
+
+additionalArguments:
+- "--providers.kubernetesingress.allowexternalnameservices"
+- "--providers.kubernetescrd.allowexternalnameservices"
+- "--serversTransport.insecureSkipVerify=true"
+
+ports:
+
+  local:
+    port: 8443
+    expose: true
+    exposedPort: 443
+    middlewares: []
+    tls:
+      secretName: sugjodev
+
+  websecure:
+    port: 8444
+    expose: true
+    exposedPort: 444
+    middlewares: []
+    tls:
+      secretName: sugjodev
+
+logs:
+  general:
+    level: ERROR
