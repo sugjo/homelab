@@ -29,6 +29,9 @@ additionalArguments:
 - "--providers.kubernetesingress.allowexternalnameservices"
 - "--providers.kubernetescrd.allowexternalnameservices"
 
+serversTransport:
+  insecureSkipVerify: true
+
 ports:
 
   local:
