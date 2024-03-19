@@ -9,5 +9,5 @@ spec:
     - ReadOnlyMany
   storageClassName: nd-music
   nfs:
-    path: /mnt/main/k3s/music
+    path: /mnt/main/k3s-storage/music
     server: 192.168.14.11

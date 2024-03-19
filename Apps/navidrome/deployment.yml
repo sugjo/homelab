@@ -29,10 +29,10 @@ spec:
         ports:
         - containerPort: 4533
         valumeMounts:
-          - name: nd-music
-            mountPath: /music
+        - name: nd-music
+          mountPath: /music
 
       volumes:
-        - name: nd-music
-          presistentVolumeClaim:
-            claimName: nd-music
+      - name: nd-music
+        presistentVolumeClaim:
+          claimName: nd-music
