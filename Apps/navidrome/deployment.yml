@@ -31,7 +31,8 @@ spec:
         valumeMounts:
           - name: nd-music
             mountPath: /music
+
       volumes:
         - name: nd-music
-          hostPath:
-            path: /mnt/main/k3s/music
+          presistentVolumeClaim:
+            claimName: nd-music
