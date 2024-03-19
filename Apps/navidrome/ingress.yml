@@ -15,7 +15,7 @@ spec:
           service:
             name: navidrome
             port:
-              number: 4533
+              number: 80
 
   tls:
   - secretName: sugjodev
