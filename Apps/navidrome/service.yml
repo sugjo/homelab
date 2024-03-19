@@ -10,4 +10,4 @@ spec:
   - port: 4533
     protocol: TCP
     targetPort: http
-    nodePort: 34533
+    nodePort: 30002
