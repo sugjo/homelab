@@ -25,6 +25,6 @@ spec:
           - name: ND_SESSIONTIMEOUT
             value : 24h
           - name: ND_BASEURL
-            value : ""
+            value : "navidrome.sugjo.dev"
         ports:
         - containerPort: 4533
