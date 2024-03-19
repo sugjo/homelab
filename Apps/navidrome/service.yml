@@ -6,5 +6,5 @@ spec:
   selector:
     app: navidrome
   ports:
-  - port: 444
+  - port: 80
     targetPort: 4533
