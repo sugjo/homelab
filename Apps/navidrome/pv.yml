@@ -6,7 +6,7 @@ spec:
   capacity:
     storage: 50Gi
   accessModes:
-    - ReadWriteMany
+    - ReadOnlyMany
   storageClassName: nd-music
   nfs:
     path: /mnt/main/k3s/music
