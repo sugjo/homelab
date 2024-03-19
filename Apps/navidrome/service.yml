@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     app: navidrome
+  type: NodePort
   ports:
   - port: 4533
     protocol: TCP
     targetPort: http
-    type: NodePort
     nodePort: 4533
