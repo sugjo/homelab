@@ -28,7 +28,10 @@ spec:
             value : ""
         ports:
         - containerPort: 4533
+        valumeMounts:
+          - name: nd-music
+            mountPath: /music
       volumes:
-      - name: nd-music
-        hostPath:
-          path: /music
+        - name: nd-music
+          hostPath:
+            path: /mnt/main/k3s/music
