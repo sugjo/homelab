@@ -8,5 +8,4 @@ spec:
   type: LoadBalancer
   ports:
   - port: 4533
-    protocol: TCP
-    targetPort: 80
+    targetPort: 4533
