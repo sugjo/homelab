@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nd-music
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nd-music
+  resources:
+    requests:
+      storage: 50Gi
