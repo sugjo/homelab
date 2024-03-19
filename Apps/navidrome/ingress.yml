@@ -15,7 +15,7 @@ spec:
           service:
             name: navidrome
             port:
-              number: http
+              number: 443
 
   tls:
   - secretName: sugjodev
