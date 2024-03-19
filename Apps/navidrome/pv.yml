@@ -7,6 +7,7 @@ spec:
     storage: 50Gi
   accessModes:
     - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: nd-music
   nfs:
     path: /mnt/main/k3s-storage/music
