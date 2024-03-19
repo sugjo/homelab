@@ -7,4 +7,6 @@ spec:
     app: navidrome
   ports:
   - port: 4533
-    type: LoadBalancer
+    protocol: TCP
+    targetPort: http
+    nodePort: 4533
