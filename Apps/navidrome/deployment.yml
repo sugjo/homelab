@@ -28,7 +28,7 @@ spec:
             value : ""
         ports:
         - containerPort: 4533
-        volumes:
-        - name: nd-music
-          hostPath:
-            path: /music
+      volumes:
+      - name: nd-music
+        hostPath:
+          path: /music
