@@ -5,9 +5,8 @@ metadata:
 spec:
   selector:
     app: navidrome
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 4533
     protocol: TCP
-    targetPort: http
-    nodePort: 30002
+    targetPort: 80
