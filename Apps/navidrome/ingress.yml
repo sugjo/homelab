@@ -6,7 +6,7 @@ metadata:
     name: navidrome
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.entrypoints: local, websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: local
     traefik.ingress.kubernetes.io/router.tls: "true"
     gethomepage.dev/description: Dynamically Detected Homepage
     gethomepage.dev/enabled: "true"
