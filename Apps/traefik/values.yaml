@@ -44,6 +44,7 @@ data:
         expose: true
         exposedPort: 443
         middlewares: []
+        permanent: true
         tls:
           secretName: sugjodev
 
