@@ -8,6 +8,3 @@ spec:
     - name: external-service
       port: 8006
   externalName: 192.168.14.10
-  selector:
-    app.kubernetes.io/instance: traefik
-    app.kubernetes.io/name: traefik
