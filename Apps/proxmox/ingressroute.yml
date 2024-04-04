@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: proxmox
+  name: external-service
   annotations:
     traefik.frontend.passHostHeader: "false"
 spec:
@@ -23,5 +23,4 @@ kind: ServersTransport
 metadata:
   name: external-service
 spec:
-  serverName: external-service
   insecureSkipVerify: true
