@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - local
   routes:
-    - match: Host(`proxmox.sugjo.dev`)
+    - match: Host(`proxmoxs.sugjo.dev`)
       kind: Rule
       services:
         - name: external-service
