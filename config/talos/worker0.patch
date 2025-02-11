@@ -1,0 +1,9 @@
+machine:
+  network:
+    hostname: worker0
+    interfaces:
+      - interface: ens18
+        dhcp: true
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.14.3

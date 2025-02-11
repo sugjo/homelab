@@ -1,0 +1,11 @@
+machine:
+  network:
+    hostname: cp0
+    interfaces:
+      - interface: ens18
+        dhcp: true
+        vip:
+          ip: 192.168.14.50
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.14.3
