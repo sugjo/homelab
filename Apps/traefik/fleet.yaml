@@ -1,4 +1,0 @@
-helm:
-  chart: traefik
-  repo: https://traefik.github.io/charts
-  version: 26.1.0
