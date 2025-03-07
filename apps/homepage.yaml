@@ -10,7 +10,7 @@ spec:
   source:
     chart: homepage
     repoURL: https://jameswynn.github.io/helm-charts
-    targetRevision: "HEAD"
+    targetRevision: "2.0.1"
     helm:
       valueFiles:
         - ./values/homepage.yaml
