@@ -13,7 +13,7 @@ spec:
     targetRevision: "2.0.1"
     helm:
       valueFiles:
-        - ./values/homepage.yaml
+        - values/homepage.yaml
   project: default
   syncPolicy:
     automated:
