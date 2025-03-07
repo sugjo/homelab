@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: homepage
-  namespace: default
+  namespace: argocd
 spec:
   destination:
     server: in-cluster
-    namespace: default
+    namespace: argocd
   source:
     chart: homepage
     repoURL: https://jameswynn.github.io/helm-charts
