@@ -1,0 +1,16 @@
+deployment:
+  kind: DaemonSet
+
+service:
+  labels:
+    color: blue
+  spec:
+    externalTrafficPolicy: Local
+
+providers:
+  kubernetesIngress:
+    publishedService:
+      enabled: true
+
+additionalArguments:
+  - --serversTransport.insecureSkipVerify=true

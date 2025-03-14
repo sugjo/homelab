@@ -1,11 +1,11 @@
 machine:
+  install:
+    disk: /dev/sdb
   network:
-    hostname: cp0
+    hostname: worker1
     interfaces:
-      - interface: ens18
+      - interface: enp2s0
         dhcp: true
-        vip:
-          ip: 192.168.14.50
         routes:
           - network: 0.0.0.0/0
             gateway: 192.168.14.1

@@ -1,9 +1,11 @@
 machine:
+  install:
+    disk: /dev/sdb
   network:
     hostname: worker0
     interfaces:
-      - interface: ens18
+      - interface: enp2s0
         dhcp: true
         routes:
           - network: 0.0.0.0/0
-            gateway: 192.168.14.3
+            gateway: 192.168.14.1
