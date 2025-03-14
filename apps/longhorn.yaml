@@ -8,6 +8,9 @@ spec:
     automated:
       prune   : true
       selfHeal: true
+    managedNamespaceMetadata:
+      labels:
+        argocd.argoproj.io/managed-by: longhorn-system
     syncOptions:
       - CreateNamespace=true
   project: default
