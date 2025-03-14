@@ -22,9 +22,9 @@ spec:
           ingress:
             enabled: true
             host: longhorn.sugjo.local
-          # metrics:
-          #   serviceMonitor:
-          #     enabled: true
+          metrics:
+            serviceMonitor:
+              enabled: true
 
   destination:
     server: https://kubernetes.default.svc
