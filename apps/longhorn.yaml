@@ -21,7 +21,7 @@ spec:
             jobEnabled: false
           ingress:
             enabled: true
-            host: longhorn.sugjo.local
+            host: longhorn.sugjo.dev
           # metrics:
           #   serviceMonitor:
           #     enabled: true
