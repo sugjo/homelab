@@ -1,0 +1,34 @@
+[[server]]
+name = "Athena"
+[server.config]
+address = "https://192.168.14.7:8120"
+enabled = true
+
+##
+
+[[server]]
+name = "Komodo"
+[server.config]
+address = "https://periphery:8120"
+enabled = true
+
+##
+
+[[builder]]
+name = "local"
+[builder.config]
+type = "Server"
+params.server_id = "Komodo"
+
+##
+
+[[resource_sync]]
+name = "Homelab"
+[resource_sync.config]
+repo = "sugjo/homelab"
+git_account = "sugjo"
+webhook_secret = "TOEQQjmnqcegvln6rF1BFiZ/4Og="
+resource_path = [
+  "infrastructure/komodo/config.toml"
+]
+managed = true
