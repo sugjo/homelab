@@ -30,4 +30,5 @@ git_account = "sugjo"
 resource_path = [
   "infrastructure/komodo/config.toml"
 ]
-managed = true
+delete = true
+pending_alert = false
