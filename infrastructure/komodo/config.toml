@@ -27,7 +27,6 @@ name = "Homelab"
 [resource_sync.config]
 repo = "sugjo/homelab"
 git_account = "sugjo"
-webhook_secret = "TOEQQjmnqcegvln6rF1BFiZ/4Og="
 resource_path = [
   "infrastructure/komodo/config.toml"
 ]
